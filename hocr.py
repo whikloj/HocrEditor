@@ -6,9 +6,11 @@ if sys.version_info[0] != 3:
     print("This script requires Python version 3 or greater")
     sys.exit(1)
 
-import argparse, os.path
+import argparse
+import os.path
 from PIL import Image
-import pyocr,  pyocr.builders
+import pyocr
+import pyocr.builders
 import wand.image
 import PyPDF2
 import io
@@ -143,7 +145,6 @@ class Hocr:
         img.type = 'grayscale'
 
         return img
-
 
 class HocrException(Exception):
 
